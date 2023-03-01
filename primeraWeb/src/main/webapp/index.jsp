@@ -13,7 +13,7 @@
     
     <h1 class="titulo1">INSCRIPCIÓN</h1>
     <div class="contenedor_formulario">
-        <form action="mostrar.jsp" method="post" class="formulario">
+        <form action="<%--mostrar.jsp--%> servlet1" method="post" class="formulario">
             <fieldset class="formulario_fieldset">
                 <legend>
                     FORMULARIO DE REGISTRO

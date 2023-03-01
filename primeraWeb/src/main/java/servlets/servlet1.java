@@ -12,7 +12,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 /**
  *
  * @author User
@@ -34,16 +33,21 @@ public class servlet1 extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+            
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet servlet1</title>");            
+            out.println("<title>Ejemplo servlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet servlet1 at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet servlet1 at " + request.getParameter("nombre") + "</h1>");
+            out.println("<h1>Servlet servlet1 at " + request.getParameter("telefono") + "</h1>");
+            out.println("<h1>Servlet servlet1 at " + request.getParameter("ciudad") + "</h1>");
+            out.println("<h1>Servlet servlet1 at " + request.getParameter("correo") + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -72,14 +76,13 @@ public class servlet1 extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-//        System.out.println(request.getParameter("nombre"));
-//        request.setAttribute("nomb",request.getParameter("nombre"));
-//        
-//        request.getSession().setAttribute("nameSesion",request.getParameter("nombre"));
-//        
-//        RequestDispatcher rd;
-//        rd=request.getRequestDispatcher("/mostrar.jsp");
-//        rd.forward(request, response);
+        /**
+            String nombre= request.getParameter("nombre");
+            String telefono= request.getParameter("telefono");
+            String ciudad= request.getParameter("ciudad");
+            String correo= request.getParameter("correo");
+        request.getSession().setAttribute(nombre, request.getParameter("nombre"));
+       **/
     }
 
     /**
