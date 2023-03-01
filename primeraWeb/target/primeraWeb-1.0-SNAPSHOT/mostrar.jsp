@@ -3,14 +3,14 @@
     Created on : 26/02/2023, 12:28:38 p. m.
     Author     : User
 --%>
-<%-- 
+
 <% 
             String nombre= request.getParameter("nombre");
             String telefono= request.getParameter("telefono");
             String ciudad= request.getParameter("ciudad");
             String correo= request.getParameter("correo");    
         %>
---%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
