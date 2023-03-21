@@ -26,3 +26,8 @@
         <h2> Consumo total de guerra: <%= consumoTot %> </h2>
     </body>
 </html>
+
+
+
+
+
