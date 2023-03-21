@@ -1,0 +1,32 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package navesAlianza;
+
+/**
+ *
+ * @author User
+ */
+public class Supremacy extends Nave{
+    protected int numCapacidadNaves;
+    public Supremacy(String tipo, int numPasajeros, double consumoCombustibleParsec, int numNaves) {
+        super(tipo, numPasajeros, consumoCombustibleParsec, numNaves);
+    }
+
+    public int getNumCapacidadNaves() {
+        return numCapacidadNaves;
+    }
+
+    public void setNumCapacidadNaves(int numCapacidadNaves) {
+        this.numCapacidadNaves = numCapacidadNaves;
+    }
+    
+    
+    @Override
+    public double calcularCombustible(double parsec) {
+        double aux = (this.consumoCombustibleParsec*parsec)*this.numCapacidadNaves;
+        double totalCombustible = ((aux*0.10)*this.numNaves)+aux;
+        return(totalCombustible);
+    }
+}

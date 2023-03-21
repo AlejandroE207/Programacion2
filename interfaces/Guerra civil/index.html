@@ -12,17 +12,17 @@
 <body>
     <h1 class="titulo1">CALCULO DE COMBUSTIBLE</h1>
     <div class="contenedor_formulario">
-        <form action="miServlet" method="post" class="formulario">
+        <form action="" method="post" class="formulario">
             <fieldset class="formulario_fieldset">
                 <legend>
-                    STAR WARS
+                    INGRESE INFORMACION DE LA NAVE
                 </legend>
                 <div class="formulario_contenedor_campos">
                     <div class="campo">
                         <label for="tipo" class="campo_label">Tipo de Nave</label>
-                        <select name="tipo" class="campo_field">
+                        <select name="tipo" class="campo_field" id="select" >
                             <option value="">Selecciona un tipo</option>
-                            <option value="HalconMilenario">Halcón Milenario</option>
+                            <option value="HalconMilenario">HalcÃ³n Milenario</option>
                             <option value="DestructorEstelar">Destructor Estelar</option>
                             <option value="LanzaderaImperial">Lanzadera Imperial</option>
                             <option value="Supremacy">Supremacy</option>
@@ -31,7 +31,7 @@
                     </div>
                     <div class="campo">
                         <label for="numPasajeros" class="campo_label">Cantidad de pasajeros</label>
-                        <input type="int" class="campo_field" placeholder="Cantidad de pasajeros" name="numPasajeros">
+                        <input type="number" class="campo_field" placeholder="Cantidad de pasajeros" name="numPasajeros">
                     </div>
                     <div class="campo">
                         <label for="consumoCombustible" class="campo_label">Consumo de Combustible</label>
@@ -39,19 +39,24 @@
                     </div>
                     <div class="campo">
                         <label for="numNaves" class="campo_label">Cantidad de naves</label>
-                        <input type="int" class="campo_field" placeholder="Cantidad de naves del mismo tipo" name="numNaves">
+                        <input type="number" class="campo_field" placeholder="Cantidad de naves del mismo tipo" name="numNaves">
                     </div>
                     <div class="campo">
                         <label for="numParc" class="campo_label">Numero de Parcec</label>
                         <input type="double" class="campo_field" placeholder="Cantidad de parcec que recorrera" name="numParc">
                     </div>
+                    <div class="campo"  >
+                        <label for="capacNaves" class="campo_label">Capacidad de naves</label>
+                        <input type="number" class="campo_field" placeholder="Capacidad de naves" name="capacNaves" id="capNav" disabled="">
+                    </div>
                 </div> 
                 <div class="flex alinear-centro">
-                    <input type="submit" class="boton enviar w-sm-100" value="Enviar">
+                    <input type="submit" class="boton enviar w-sm-100" value="Enviar" >
                 </div>
 
             </fieldset>
         </form>
     </div>
+    <script src="scrips.js"></script>
 </body>
 </html>
