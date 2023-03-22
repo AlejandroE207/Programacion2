@@ -6,6 +6,7 @@
     --azul:rgb(99, 157, 191);
     --blanco:rgb(255, 255, 255);
     --verde: rgb(11, 186, 38);
+    --morado: rgba(146, 27, 175, 0.3);
 }
 
 html{
@@ -34,12 +35,12 @@ h1{
 }
 
 img{
-    max-width: 100%;
+    max-width: 50%;
 }
 
 body{
     font-size: 16px;
-    background-image:url(nebula.jpg);
+    background-image:url(starwars.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -61,14 +62,15 @@ body{
     margin-top: 1.2rem;
     margin: 1.2rem auto;
 }
-.contenedor_formulario , .info{
+.contenedor_formulario {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: min(100%);
 }
-.formulario , .contenedor_info{
-    background-color: var(--grisClaro);
-    width:min(60rem,100%);
+.formulario{
+    /*background-color: var(--grisClaro);*/
+    width:min(100%);
     margin: auto;
     padding: 2rem;
     border-radius: 2rem;
@@ -81,8 +83,36 @@ legend{
     margin-bottom: 3rem;
     font-weight: bold;
     font-size: 2rem;
+    color: var(--blanco);
 }
 
+.nave{
+    background-color:var(--morado);
+    text-align: center;
+    border-radius: 2rem;
+}
+
+@media (max-width: 768px){
+    .nave{
+        margin-bottom: 2rem;
+    }
+}
+    
+
+
+@media (min-width:768px) {
+    .formulario_fieldset{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+        column-gap: 2rem;
+        row-gap: 2rem;
+    }
+    .nave:nth-child(5){
+        grid-column-start: 3;
+    }
+
+}
 
 
 @media (min-width:768px) {
@@ -105,11 +135,12 @@ legend{
     font-size: 2rem;
 }
 
-.campo_field , .campo_info{
+.campo_field {
     width: 100%;
     border: none;
     padding: 1.5rem;
     border-radius: 1.2rem;
+    display: grid;
 }
 .campo_info{
     background-color: var(--blanco);
@@ -130,9 +161,23 @@ legend{
 @media (min-width:760px){
     .boton{
         width:50%;
+        height: 10%;
         border:none;
+        margin: auto;
+        -webkit-box-shadow: 10px 10px 300px 43px rgba(238,255,0,1);
+        -moz-box-shadow: 10px 10px 300px 43px rgba(238,255,0,1);
+        box-shadow: 10px 10px 300px 43px rgba(238,255,0,1);
+    }
+    .boton_envio{
+        grid-column-start: 2;
+        grid-row-start: 2;
+    }
+    #capacidad_naves{
+        grid-column-start: 1;
+        grid-column-end: 3;
     }
 }
+
 
 .boton:hover{
     background-color:var(--verde) ;
