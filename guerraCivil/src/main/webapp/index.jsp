@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <h1 class="titulo1">STAR WARS</h1>
+    <h1 class="titulo1">STAR WARS </h1>
     <div class="contenedor_formulario">
         <form action="miServlet" method="post" class="formulario">
             <legend>
