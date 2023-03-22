@@ -10,8 +10,9 @@ package navesAlianza;
  */
 public class Supremacy extends Nave{
     protected int numCapacidadNaves;
-    public Supremacy(String tipo, int numPasajeros, double consumoCombustibleParsec, int numNaves) {
+    public Supremacy(String tipo, int numPasajeros, double consumoCombustibleParsec, int numNaves, int numCapacidadNaves) {
         super(tipo, numPasajeros, consumoCombustibleParsec, numNaves);
+        this.numCapacidadNaves = numCapacidadNaves;
     }
 
     public int getNumCapacidadNaves() {

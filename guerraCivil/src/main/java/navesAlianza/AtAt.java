@@ -16,7 +16,7 @@ public class AtAt extends Nave{
     @Override
     public double calcularCombustible(double parsec) {
         double aux = (this.consumoCombustibleParsec*parsec);
-        double totalDeCombustible=aux-(aux*0.25);
+        double totalDeCombustible=(aux-(aux*0.25))*this.numNaves;
         return(totalDeCombustible);
     }
 }

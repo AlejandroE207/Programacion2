@@ -172,7 +172,7 @@ legend{
         grid-column-start: 2;
         grid-row-start: 2;
     }
-    #capacidad_naves{
+    .ultimo_naves{
         grid-column-start: 1;
         grid-column-end: 3;
     }

@@ -73,83 +73,81 @@ public class miServlet extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-            
+            throws ServletException, IOException {   
         
-        String tipo = request.getParameter("tipo");
-        int numeroPasajeros = Integer.parseInt(request.getParameter("numPasajeros"));
-        double consumo = Double.parseDouble(request.getParameter("consumoCombustible"));
-        int numeroNaves = Integer.parseInt(request.getParameter("numNaves"));
-        double recorrido = Double.parseDouble(request.getParameter("numParc"));
+        //HALCON MILENARIO
+        String hmTipo = request.getParameter("hmTipo");
+        System.out.println("hmtipo: "+hmTipo);
+        int hmPasajeros = Integer.parseInt(request.getParameter("hmPasajeros"));
+        double hmConsumo = Double.parseDouble(request.getParameter("hmConsumo"));
+        int hmNumNaves = Integer.parseInt(request.getParameter("hmNumNaves"));
+        int hmNumParc = Integer.parseInt(request.getParameter("hmNumParc"));
         
-        double consumoTot=0.0;
+        
+        //DESTRUCTOR ESTELAR
+        String deTipo = request.getParameter("deTipo");
+        int dePasajeros = Integer.parseInt(request.getParameter("dePasajeros"));
+        double deConsumo = Double.parseDouble(request.getParameter("deConsumo"));
+        int deNumNaves = Integer.parseInt(request.getParameter("deNumNaves"));
+        int deNumParc = Integer.parseInt(request.getParameter("deNumParc"));
+        
+        //LANZADERA IMPERIAL
+        String liTipo = request.getParameter("liTipo");
+        int liPasajeros = Integer.parseInt(request.getParameter("liPasajeros"));
+        double liConsumo = Double.parseDouble(request.getParameter("liConsumo"));
+        int liNumNaves = Integer.parseInt(request.getParameter("liNumNaves"));
+        int liNumParc = Integer.parseInt(request.getParameter("liNumParc"));
+        
+        //SUPREMACY
+        String suTipo = request.getParameter("suTipo");
+        int suPasajeros = Integer.parseInt(request.getParameter("suPasajeros"));
+        double suConsumo = Double.parseDouble(request.getParameter("suConsumo"));
+        int suNumNaves = Integer.parseInt(request.getParameter("suNumNaves"));
+        int suNumParc = Integer.parseInt(request.getParameter("suNumParc"));
+        int suCapNaves = Integer.parseInt(request.getParameter("suCapNaves"));
         
         
-        switch(tipo){
-            case "HalconMilenario":
-                HalconMilenario nave1 = new HalconMilenario(tipo, numeroPasajeros, consumo, numeroNaves);
-                consumoTot = nave1.calcularCombustible(recorrido);
-                request.getSession().setAttribute("tipo", nave1.getTipo());
-                request.getSession().setAttribute("numPasajeros", nave1.getNumPasajeros());
-                request.getSession().setAttribute("consumoNav", nave1.getCombustibleParsec());
-                request.getSession().setAttribute("numNaves", nave1.getNumNaves());
-                request.getSession().setAttribute("consumoTot", consumoTot);
-                 
-                break;
-            case "DestructorEstelar":
-                DestructorEstelar nave2 = new DestructorEstelar(tipo, numeroPasajeros, consumo, numeroNaves);
-                consumoTot = nave2.calcularCombustible(recorrido);
-                request.getSession().setAttribute("tipo", nave2.getTipo());
-                request.getSession().setAttribute("numPasajeros", nave2.getNumPasajeros());
-                request.getSession().setAttribute("consumoNav", nave2.getCombustibleParsec());
-                request.getSession().setAttribute("numNaves", nave2.getNumNaves());
-                request.getSession().setAttribute("consumoTot", consumoTot);
-                
-                break;
-            case "LanzaderaImperial":
-                LanzaderaImperial nave3 = new LanzaderaImperial(tipo, numeroPasajeros, consumo, numeroNaves);
-                consumoTot = nave3.calcularCombustible(recorrido);
-                request.getSession().setAttribute("tipo", nave3.getTipo());
-                request.getSession().setAttribute("numPasajeros", nave3.getNumPasajeros());
-                request.getSession().setAttribute("consumoNav", nave3.getCombustibleParsec());
-                request.getSession().setAttribute("numNaves", nave3.getNumNaves());
-                request.getSession().setAttribute("consumoTot", consumoTot);
-                break;
-            case "Supremacy":
-                Supremacy nave4 = new Supremacy(tipo, numeroPasajeros, consumo, numeroNaves);
-                consumoTot = nave4.calcularCombustible(recorrido);
-                request.getSession().setAttribute("tipo", nave4.getTipo());
-                request.getSession().setAttribute("numPasajeros", nave4.getNumPasajeros());
-                request.getSession().setAttribute("consumoNav", nave4.getCombustibleParsec());
-                request.getSession().setAttribute("numNaves", nave4.getNumNaves());
-                request.getSession().setAttribute("consumoTot", consumoTot);
-                break;
-            case "AtAt":
-                AtAt nave5 = new AtAt(tipo, numeroPasajeros, consumo, numeroNaves);
-                consumoTot = nave5.calcularCombustible(recorrido);
-                request.getSession().setAttribute("tipo", nave5.getTipo());
-                request.getSession().setAttribute("numPasajeros", nave5.getNumPasajeros());
-                request.getSession().setAttribute("consumoNav", nave5.getCombustibleParsec());
-                request.getSession().setAttribute("numNaves", nave5.getNumNaves());
-                request.getSession().setAttribute("consumoTot", consumoTot);
-                break;
-                
-            default:
-                System.out.println("No ha digitado una opcion valida");
-        }
+        //AT-AT
+        String atTipo = request.getParameter("atTipo");
+        int atPasajeros = Integer.parseInt(request.getParameter("atPasajeros"));
+        double atConsumo = Double.parseDouble(request.getParameter("atConsumo"));
+        int atNumNaves = Integer.parseInt(request.getParameter("atNumNaves"));
+        int atNumParc = Integer.parseInt(request.getParameter("atNumParc"));
+        
+        HalconMilenario nave1 = new HalconMilenario(hmTipo, hmPasajeros, hmConsumo, hmNumNaves);
+        double comb1=nave1.calcularCombustible(hmNumParc);
+        
+        DestructorEstelar nave2 = new DestructorEstelar(deTipo, dePasajeros, deConsumo, deNumNaves);
+        double comb2=nave2.calcularCombustible(deNumParc);
+        
+        LanzaderaImperial nave3 = new LanzaderaImperial(liTipo, liPasajeros, liConsumo, liNumNaves);
+        double comb3=nave3.calcularCombustible(liNumParc);
+        
+        Supremacy nave4 = new Supremacy(suTipo, suPasajeros, suConsumo, suNumNaves, suCapNaves);
+        double comb4=nave4.calcularCombustible(suNumParc);
+        
+        AtAt nave5 = new AtAt(atTipo, atPasajeros, atConsumo, atNumNaves);
+        double comb5=nave5.calcularCombustible(atNumParc);
+        
+       
+        
+        
+        double consumoTot=comb1+comb2+comb3+comb4+comb5;
+        
+        request.getSession().setAttribute("halcon", nave1);
+        request.getSession().setAttribute("halcon_consumo", comb1);
+        request.getSession().setAttribute("destructor", nave2);
+        request.getSession().setAttribute("lanzadera", nave3);
+        request.getSession().setAttribute("supremacy", nave4);
+        request.getSession().setAttribute("atat", nave5);
+        request.getSession().setAttribute("consumoTot", consumoTot);
+        
+        
         response.sendRedirect("mostrar.jsp"); 
-        System.out.println("El tipo es: "+tipo);
-        System.out.println("El numero de pasajeros es: "+numeroPasajeros);
         
         
-//        
-//        RequestDispatcher rd = request.getRequestDispatcher("mostrar.jsp");
-//        rd.forward(request, response);
-//        request.setAttribute("tipo", tipo);
         
-//        
-//        HttpSession session = request.getSession();
-//        session.setAttribute("tip", tipo);
+//                
         
         
     }

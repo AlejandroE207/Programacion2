@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <h1 class="titulo1">STAR WARS </h1>
+    <h1 class="titulo1">STAR WARS</h1>
     <div class="contenedor_formulario">
         <form action="miServlet" method="post" class="formulario">
             <legend>
@@ -26,6 +26,10 @@
                 <div class="nave">
                     <legend>Halcon Milenario</legend>
                     <div class="formulario_contenedor_campos">
+                        <div class="campo">
+                            <label for="hmTipo" class="campo_label">Tipo de nave</label>
+                            <input type="text" class="campo_field" placeholder="Tipo de nave" name="hmTipo">
+                        </div>
                         <div class="campo">
                             <label for="hmPasajeros" class="campo_label">Cantidad de pasajeros</label>
                             <input type="number" class="campo_field" placeholder="Cantidad de pasajeros" name="hmPasajeros">
@@ -38,7 +42,7 @@
                             <label for="hmNumNaves" class="campo_label">Cantidad de naves</label>
                             <input type="number" class="campo_field" placeholder="Cantidad de naves del mismo tipo" name="hmNumNaves">
                         </div>
-                        <div class="campo">
+                        <div class="campo ultimo_naves">
                             <label for="hmNumParc" class="campo_label">Numero de Parcec</label>
                             <input type="double" class="campo_field" placeholder="Cantidad de parcec que recorrera" name="hmNumParc">
                         </div>
@@ -48,6 +52,10 @@
                 <div class="nave">
                     <legend>Destructor Estelar</legend>
                     <div class="formulario_contenedor_campos">
+                        <div class="campo">
+                            <label for="deTipo" class="campo_label">Tipo de nave</label>
+                            <input type="text" class="campo_field" placeholder="Tipo de nave" name="deTipo">
+                        </div>
                         <div class="campo">
                             <label for="dePasajeros" class="campo_label">Cantidad de pasajeros</label>
                             <input type="number" class="campo_field" placeholder="Cantidad de pasajeros" name="dePasajeros">
@@ -60,7 +68,7 @@
                             <label for="deNumNaves" class="campo_label">Cantidad de naves</label>
                             <input type="number" class="campo_field" placeholder="Cantidad de naves del mismo tipo" name="deNumNaves">
                         </div>
-                        <div class="campo">
+                        <div class="campo ultimo_naves">
                             <label for="deNumParc" class="campo_label">Numero de Parcec</label>
                             <input type="double" class="campo_field" placeholder="Cantidad de parcec que recorrera" name="deNumParc">
                         </div>
@@ -71,6 +79,10 @@
                 <div class="nave">
                     <legend>Lanzadera Imperial</legend>
                     <div class="formulario_contenedor_campos">
+                        <div class="campo">
+                            <label for="liTipo" class="campo_label">Tipo de nave</label>
+                            <input type="text" class="campo_field" placeholder="Tipo de nave" name="liTipo">
+                        </div>
                         <div class="campo">
                             <label for="liPasajeros" class="campo_label">Cantidad de pasajeros</label>
                             <input type="number" class="campo_field" placeholder="Cantidad de pasajeros" name="liPasajeros">
@@ -83,7 +95,7 @@
                             <label for="liNumNaves" class="campo_label">Cantidad de naves</label>
                             <input type="number" class="campo_field" placeholder="Cantidad de naves del mismo tipo" name="liNumNaves">
                         </div>
-                        <div class="campo">
+                        <div class="campo ultimo_naves">
                             <label for="liNumParc" class="campo_label">Numero de Parcec</label>
                             <input type="double" class="campo_field" placeholder="Cantidad de parcec que recorrera" name="liNumParc">
                         </div>
@@ -94,6 +106,10 @@
                 <div class="nave">
                     <legend>Supremacy</legend>
                     <div class="formulario_contenedor_campos">
+                        <div class="campo">
+                            <label for="suTipo" class="campo_label">Tipo de nave</label>
+                            <input type="text" class="campo_field" placeholder="Tipo de nave" name="suTipo">
+                        </div>
                         <div class="campo">
                             <label for="suPasajeros" class="campo_label">Cantidad de pasajeros</label>
                             <input type="number" class="campo_field" placeholder="Cantidad de pasajeros" name="suPasajeros">
@@ -110,9 +126,9 @@
                             <label for="suNumParc" class="campo_label">Numero de Parcec</label>
                             <input type="double" class="campo_field" placeholder="Cantidad de parcec que recorrera"  name="suNumParc">
                         </div>
-                        <div class="campo" id="capacidad_naves">
-                            <label for="suCapacNaves" class="campo_label">Capacidad de naves</label>
-                            <input type="number" class="campo_field" placeholder="Capacidad de naves" name="suCapacNaves" id="capNav">
+                        <div class="campo ">
+                            <label for="suCapNaves" class="campo_label">Capacidad de naves</label>
+                            <input type="number" class="campo_field" placeholder="Capacidad de naves" name="suCapNaves" id="capNav">
                         </div>
                     </div>
                     <img src="supremacy.png" alt="">
@@ -121,6 +137,10 @@
                 <div class="nave">
                     <legend>At-At</legend>
                     <div class="formulario_contenedor_campos">
+                        <div class="campo">
+                            <label for="atTipo" class="campo_label">Tipo de nave</label>
+                            <input type="text" class="campo_field" placeholder="Tipo de nave" name="atTipo">
+                        </div>
                         <div class="campo">
                             <label for="atPasajeros" class="campo_label">Cantidad de pasajeros</label>
                             <input type="number" class="campo_field" placeholder="Cantidad de pasajeros" name="atPasajeros">
@@ -133,7 +153,7 @@
                             <label for="atNumNaves" class="campo_label">Cantidad de naves</label>
                             <input type="number" class="campo_field" placeholder="Cantidad de naves del mismo tipo" name="atNumNaves">
                         </div>
-                        <div class="campo">
+                        <div class="campo ultimo_naves">
                             <label for="atNumParc" class="campo_label">Numero de Parcec</label>
                             <input type="double" class="campo_field" placeholder="Cantidad de parcec que recorrera" name="atNumParc">
                         </div>
@@ -143,7 +163,6 @@
                 <div class="flex alinear-centro boton_envio">
                     <input type="submit" class="boton enviar w-sm-100" value="Enviar">
                 </div>
-
             </fieldset>
         </form>
     </div>
